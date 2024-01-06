@@ -19,7 +19,7 @@ parser.add_argument('--smtp_password', help='SMTP password')
 parser.add_argument('--sender_email', required=True, help='Sender email address')
 parser.add_argument('--receiver_email', required=True, help='Receiver email address')
 parser.add_argument('--spoofed_email', required=True, help='Spoofed email address')
-parser.add_argument('--enable_debug', action='store_true', help='Enable SMTP debug messages')  # Added parameter
+parser.add_argument('--enable_debug', action='store_true', help='Enable SMTP debug messages')
 args = parser.parse_args()
 
 # SMTP server details
