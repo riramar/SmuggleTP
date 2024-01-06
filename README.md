@@ -28,6 +28,8 @@ options:
   --enable_debug        Enable SMTP debug messages
 ```
 
+If you have received an email from SPOOFED_EMAIL to RECEIVER_EMAIL, it's likely that the exploit worked.
+
 # Contact
 
 * https://twitter.com/ricardo_iramar
