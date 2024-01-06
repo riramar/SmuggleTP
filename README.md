@@ -1,6 +1,6 @@
 # SmuggleTP
 
-A simple tool to exploit SMTP Smuggling vulnerabilities (ref. https://sec-consult.com/blog/detail/smtp-smuggling-spoofing-e-mails-worldwide/).
+A straightforward tool for exploiting SMTP Smuggling vulnerabilities (https://sec-consult.com/blog/detail/smtp-smuggling-spoofing-e-mails-worldwide/).
 
 # Usage
 
